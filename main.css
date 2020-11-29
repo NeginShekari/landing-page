@@ -1,0 +1,285 @@
+@font-face {
+    font-family: vazir;
+    src: url(fonts/Vazir-Light.ttf);
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    font-family: vazir;
+}
+body{
+    overflow-x: hidden;
+    margin-left: -4rem;
+}
+button,a{
+    position: relative;
+    transition: all 0.3s ease;
+}
+button:hover,a:hover{
+    top: -3px;
+}
+p{
+    text-align: justify;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+.navbar{
+    width: 100%;
+    position: fixed;
+    background-color: #ece7e1;
+    padding: 2rem 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+.navbar.sticky{
+    background: #ece7e1;
+    padding: 10px 50px;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .right-hand ul{
+    display: flex;
+    list-style: none;
+}
+.navbar .right-hand ul li{
+    margin: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.navbar .right-hand ul li:hover{
+    color: #da6b76;
+}
+.navbar .left-hand {
+    width: 150px;
+}
+.navbar .left-hand img{
+    width: 100%;
+}
+section .left-hand .right_btn{
+    background: linear-gradient(to right, #dae2f8, #8d6d6d);
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+    outline: none;
+    cursor: pointer;
+}
+.btnBx{
+	margin-top: 1rem;
+}
+.icon{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+.menu-list .cancel-btn{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+.menu-list .cancel-btn:hover{
+    color: #da6b76;
+}
+section{
+    background-color: #ece7e1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10rem;
+}
+section:nth-of-type(2){
+    background-color: #fff;
+    padding: 10rem;
+} 
+section:nth-of-type(2) button{
+    width: 30%;
+    padding: 0.7rem;
+    background: #ece7e1;
+    border: 1px solid #d8c3c3;
+    margin: 1rem 0rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+section .left-hand{
+    flex-basis: 50%;
+    padding: 0 0 10rem 10rem;
+}
+section:nth-of-type(2) .right-hand{
+    margin: -1rem;
+}
+section .left-hand h1{
+    padding: 2rem 0;
+}
+section .left-hand p{
+    padding: 0.5rem 0;
+}
+section .left-hand .left_btn{
+    border: 2px solid #d8c3c3;
+    padding: 1rem 2.4rem;
+    border-radius: 40px;
+    outline: none;
+    cursor: pointer;
+    background: none;
+}
+section .right-hand{
+    flex-basis: 50%;
+    display: flex;
+    
+}
+section:nth-of-type(2) .right-hand{
+    flex-direction: column;
+}
+section .imgBx{
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+section .imgBx img{
+    width: 100%;
+}
+section .right-hand .imgBx img{
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+section .right-hand .img1{
+    top: 12rem;
+    left: -3rem;
+}
+section .right-hand .img1 img{
+    width: 130%;
+    box-shadow: 10px 20px 14px 0 rgba(0, 0, 0, 0.2);
+}
+section .right-hand .img2{
+    left: 11rem;
+}
+section .right-hand .img2 img{
+    width: 130%;
+}
+section .right-hand .img3{
+    left: 4rem;
+}
+section .right-hand .img3 img{
+    width: 147%;
+    height: 147%;
+}
+section:nth-of-type(2) .left-hand img{
+    width: 210%;
+    border-bottom-right-radius: 33px;
+    border-top-left-radius: 33px;
+}
+
+
+@media (max-width:1300px){
+    section{
+        padding-top: 3rem;
+    }
+    section .left-hand {
+        flex-basis: 50%;
+        padding: 4rem 3rem 10rem 10rem;
+    }
+    section:nth-of-type(2){
+        padding: 2rem;
+    }
+    section:nth-of-type(2) .left-hand{
+        padding: 1rem ;
+    }
+}
+@media (max-width:1160px){
+    section{
+        flex-direction: column;
+        padding-top: 10rem;
+    }
+    section .left-hand {
+        flex-basis: 50%;
+        padding: 12rem 6rem 2rem 6rem;
+    }
+    section:nth-of-type(2) .left-hand{
+        padding: 1rem ;
+    }
+    section:nth-of-type(2) .left-hand img {
+        width: 150%;
+    }
+    section .right-hand{
+        padding: 1rem 3rem 1rem 6rem;
+    }
+}
+@media (max-width:850px){
+    body.disabled{
+        overflow: hidden;
+      }
+      .icon{
+        display: block;
+      }
+      .icon.hide{
+        display: none;
+      }
+      .navbar{
+        padding: 2rem 2rem;
+      }
+      .navbar .menu-list{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 400px;
+        left: -100%;
+        top: 0px;
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+        background: #222;
+        transition: all 0.3s ease;
+        z-index: 3;
+        color: #fff;
+      }
+      .navbar.show .menu-list{
+        left: 0%;
+        flex-direction: column;
+      }
+      .navbar.show .menu-list li{
+          cursor: pointer;
+          margin-top: 2.5rem;
+      }
+}
+@media (max-width:630px){
+    section .right-hand .img1{
+        top: 0;
+        left: 0;
+    }
+    section .right-hand .img2,
+    section .right-hand .img3
+    {
+        display: none;
+    }
+    section .right-hand{
+        padding: 1rem 0;
+    }
+    section .left-hand{
+        padding: 0rem 3rem 2rem 3rem;
+    }
+    .navbar .left-hand{
+        padding: 0.5rem 1.5rem;
+    }
+    section:nth-of-type(2) .left-hand{
+        padding: 1rem ;
+    }
+    section:nth-of-type(2) .left-hand img {
+        width: 100%;
+    }
+    .btnBx{
+        display: flex;
+    }
+    section .imgBx {
+        width: 300px;
+    }
+    section .right-hand .img1 img{
+        width: 100%;
+    }
+}

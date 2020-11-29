@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Developer Community</title>
+</head>
+<body>
+    <nav class="navbar">
+            <div class="right-hand">
+                <ul class="menu-list">
+                    <div class="icon cancel-btn">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <li><a href="index.html">خانه</a></li>
+                </ul>
+                <div class="icon menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="left-hand">
+                <img src="img/logo.svg" alt="logo">
+            </div>
+    </nav>
+    <section>
+        <div class="right-hand">
+            <div class="imgBx img1">
+                <img src="img/img3.jpg" alt="developer Community">
+            </div>
+            <div class="imgBx img2">
+                <img src="img/img2.jpg" alt="developer Community">
+            </div>
+            <div class="imgBx img3">
+                <img src="img/img1.jpg" alt="developer Community">
+            </div>
+        </div>
+        <div class="left-hand">
+            <h1>تعامل با توسعه دهندگان</h1>
+            <p><strong>چالش</strong> های خود را با دیگران به اشتراک بگذارید</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Na
+                tus vero nam beatae aut commodi eligendi culpa voluptas, eum laborum fugit maiores a del
+                ectus temporibus, repudiandae quidem porro, eveniet ab excepturi.
+            </p>
+            <div class="btnBx">
+                <a class="right_btn" href="login.html">ورود</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="right-hand">
+            <h2>مباحث پربازدید</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipis
+                icing elit. Ipsa placeat, voluptatum ipsam molestias
+                , magnam qui recusandae laborum impedit quasi ullam invent
+                ore explicabo dignissimos maiores suscipit sed sequi fugiat temporibus itaque!</p>
+            <button>بازدید از مقاله ها</button>    
+        </div>
+        <div class="left-hand">
+            <div class="imgBx">
+                <img src="img/img2.jpg">
+            </div>
+        </div>
+    </section>
+    <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = () =>{
+            navbar.classList.add('show');
+            menuBtn.classList.add('hide');
+            body.classList.add('disabled');
+        }
+        cancelBtn.onclick = ()=>{
+            body.classList.remove("disabled");
+            navbar.classList.remove("show");
+            menuBtn.classList.remove("hide");
+        }
+        window.onscroll = () =>{
+            this.scrollY > 20 ? navbar.classList.add('sticky') : navbar.classList.remove('sticky');
+        }
+    </script>
+</body>
+</html>
