@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>login</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="right-hand">
+                <ul class="menu-list">
+                    <div class="icon cancel-btn">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <li><a href="index.html">خانه</a></li>
+               
+                </ul>
+                <div class="icon menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="left-hand">
+                <img src="img/logo.svg" alt="logo">
+            </div>
+        </nav>
+        <div class="img">
+            <img src="img/profile.svg">
+        </div>
+        <div class="login-content">
+            <form action="#">
+                <img class="avatar" src="img/avatar.svg">
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div>
+                        <h5>نام کاربری</h5>
+                        <input type="text" class="input">
+                    </div>
+                </div>
+                <div class="input-div two">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div>
+                        <h5>رمز عبور</h5>
+                        <input type="password" class="input">
+                    </div>
+                </div>
+                <a href="#">رمز عبور را فراموش کرده اید؟</a>
+                <input type="submit" class="btn" value="ورود">
+            </form>
+        </div>
+    </div>
+    <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = () =>{
+            navbar.classList.add('show');
+            menuBtn.classList.add('hide');
+            body.classList.add('disabled');
+        }
+        cancelBtn.onclick = ()=>{
+            body.classList.remove("disabled");
+            navbar.classList.remove("show");
+            menuBtn.classList.remove("hide");
+        }
+        window.onscroll = () =>{
+            this.scrollY > 20 ? navbar.classList.add('sticky') : navbar.classList.remove('sticky');
+        }
+
+
+        const inputs = document.querySelectorAll(".input");
+        function addcl(){
+        	let parent = this.parentNode.parentNode;
+        	parent.classList.add("focus");
+        }
+
+        function remcl(){
+        	let parent = this.parentNode.parentNode;
+        	if(this.value == ""){
+        		parent.classList.remove("focus");
+        	}
+        }
+        inputs.forEach(input => {
+        	input.addEventListener("focus", addcl);
+        	input.addEventListener("blur", remcl);
+        });
+    </script>
+</body>
+</html>
